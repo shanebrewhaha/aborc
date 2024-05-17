@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpqyefncmboqy"]
+[gd_scene load_steps=6 format=3 uid="uid://dpqyefncmboqy"]
 
 [ext_resource type="Script" path="res://right_path_death.gd" id="1_fh85x"]
 [ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_wcah8"]
 [ext_resource type="Texture2D" uid="uid://b7w88lias8fox" path="res://assets/Gemini_Generated_Image_jxvh71jxvh71jxvh.jpg" id="3_0757w"]
+[ext_resource type="Texture2D" uid="uid://clqruousucmbe" path="res://assets/black.png" id="4_fpayx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o6i5j"]
 font = ExtResource("1_wcah8")
@@ -13,9 +14,9 @@ script = ExtResource("1_fh85x")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 4.0
-offset_top = 472.0
-offset_right = 922.0
-offset_bottom = 643.0
+offset_top = 481.0
+offset_right = 940.0
+offset_bottom = 642.0
 text = "You walk down the right path AGIAN, but you notice
 its getting much darker. Each step you take the 
 darker it gets. Eventually you smell fresh air,
@@ -43,9 +44,15 @@ text = "Last Room"
 
 [node name="GeminiGeneratedImageJxvh71Jxvh71Jxvh" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(576, 308)
+position = Vector2(577, 311)
 scale = Vector2(0.833333, 0.458984)
 texture = ExtResource("3_0757w")
+
+[node name="Black" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 559.75)
+scale = Vector2(1.92, 0.43375)
+texture = ExtResource("4_fpayx")
 
 [connection signal="button_down" from="Button_restart" to="." method="_on_button_restart_button_down"]
 [connection signal="button_down" from="Button_last_room" to="." method="_on_button_last_room_button_down"]

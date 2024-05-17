@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqlla57ujtxjp"]
+[gd_scene load_steps=6 format=3 uid="uid://bqlla57ujtxjp"]
 
 [ext_resource type="Script" path="res://right_cave_one.gd" id="1_mm1us"]
 [ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_neghk"]
 [ext_resource type="Texture2D" uid="uid://d2jy77qdqh7s5" path="res://assets/Gemini_Generated_Image_p33kzbp33kzbp33k.jpg" id="3_lehtt"]
+[ext_resource type="Texture2D" uid="uid://clqruousucmbe" path="res://assets/black.png" id="4_4uxse"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i06e"]
 font = ExtResource("2_neghk")
@@ -55,6 +56,12 @@ z_index = -1
 position = Vector2(583, 405)
 scale = Vector2(0.602254, 0.602254)
 texture = ExtResource("3_lehtt")
+
+[node name="Black" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 552)
+scale = Vector2(1.91667, 0.475)
+texture = ExtResource("4_4uxse")
 
 [connection signal="button_down" from="Button_straight" to="." method="_on_button_straight_button_down"]
 [connection signal="button_down" from="Button_left" to="." method="_on_button_left_button_down"]
