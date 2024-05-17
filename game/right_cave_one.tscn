@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqlla57ujtxjp"]
+
+[ext_resource type="Script" path="res://right_cave_one.gd" id="1_mm1us"]
+[ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_neghk"]
+[ext_resource type="Texture2D" uid="uid://d2jy77qdqh7s5" path="res://assets/Gemini_Generated_Image_p33kzbp33kzbp33k.jpg" id="3_lehtt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1i06e"]
+font = ExtResource("2_neghk")
+font_size = 18
+
+[node name="RightCaveOne" type="Node2D"]
+script = ExtResource("1_mm1us")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 472.0
+offset_right = 922.0
+offset_bottom = 643.0
+text = "You walk down the right path and think to yourself,
+\"When in doubt choose right\". You smirk and think
+yourself so smart. You come into the cave and it is
+very bland, much like you. Your smirk fades as you 
+look into the empty chamber, much like your head, 
+all you see is three paths that lead deeper. You 
+think to yourself and say \"I'll be diffrent\" as you
+prepair to choose your next path!"
+label_settings = SubResource("LabelSettings_1i06e")
+
+[node name="Button_straight" type="Button" parent="."]
+offset_left = 935.0
+offset_top = 464.0
+offset_right = 1118.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("2_neghk")
+text = "Straight"
+
+[node name="Button_left" type="Button" parent="."]
+offset_left = 935.0
+offset_top = 581.0
+offset_right = 1118.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("2_neghk")
+text = "Left"
+
+[node name="Button_right" type="Button" parent="."]
+offset_left = 936.0
+offset_top = 521.0
+offset_right = 1119.0
+offset_bottom = 572.0
+theme_override_fonts/font = ExtResource("2_neghk")
+text = "Right"
+
+[node name="GeminiGeneratedImageP33Kzbp33Kzbp33k" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(583, 405)
+scale = Vector2(0.602254, 0.602254)
+texture = ExtResource("3_lehtt")
+
+[connection signal="button_down" from="Button_straight" to="." method="_on_button_straight_button_down"]
+[connection signal="button_down" from="Button_left" to="." method="_on_button_left_button_down"]
+[connection signal="button_down" from="Button_right" to="." method="_on_button_right_button_down"]

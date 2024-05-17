@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfjy73bali7jx"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_gkp0d"]
+[ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_gx7hi"]
+[ext_resource type="Texture2D" uid="uid://c42iw26en6ioy" path="res://assets/Gemini_Generated_Image_p33kz7p33kz7p33k.jpg" id="3_6o8yg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yyi6c"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gkp0d")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 380.0
+offset_top = 372.0
+offset_right = 761.0
+offset_bottom = 577.0
+theme_override_fonts/font = ExtResource("2_gx7hi")
+theme_override_font_sizes/font_size = 23
+text = "START"
+
+[node name="Label" type="Label" parent="."]
+light_mask = 2
+offset_left = 212.0
+offset_top = 59.0
+offset_right = 944.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("2_gx7hi")
+text = "ABORC CAVES
+A text adventure game.
+"
+label_settings = SubResource("LabelSettings_yyi6c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GeminiGeneratedImageP33Kz7p33Kz7p33k" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(583, 330)
+scale = Vector2(0.411133, 0.411133)
+texture = ExtResource("3_6o8yg")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

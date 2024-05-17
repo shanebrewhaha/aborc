@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://jao5gf7nckw6"]
+
+[ext_resource type="Script" path="res://cave_right_2.gd" id="1_bcycc"]
+[ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_fi2r3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7nfi2"]
+font = ExtResource("1_fi2r3")
+font_size = 18
+
+[node name="CaveRight2" type="Node2D"]
+script = ExtResource("1_bcycc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 472.0
+offset_right = 922.0
+offset_bottom = 643.0
+text = "You walk into the chamber after once again going 
+down the right path. You see a sign on the wall of
+the chamber. After reading it you look around and
+see nothing. Confused you go back and read the sign.
+Looking aorund the chamber once more you look back
+at the sign that says \"Ultra Rare Chamber\" all 
+there is three more paths. Straight, right and left."
+label_settings = SubResource("LabelSettings_7nfi2")
+
+[node name="Button_straight" type="Button" parent="."]
+offset_left = 948.0
+offset_top = 465.0
+offset_right = 1131.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("1_fi2r3")
+text = "Straight"
+
+[node name="Button_left" type="Button" parent="."]
+offset_left = 948.0
+offset_top = 582.0
+offset_right = 1131.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("1_fi2r3")
+text = "Left"
+
+[node name="Button_right" type="Button" parent="."]
+offset_left = 949.0
+offset_top = 522.0
+offset_right = 1132.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("1_fi2r3")
+text = "Right"
+
+[connection signal="button_down" from="Button_straight" to="." method="_on_button_straight_button_down"]
+[connection signal="button_down" from="Button_left" to="." method="_on_button_left_button_down"]
+[connection signal="button_down" from="Button_right" to="." method="_on_button_right_button_down"]

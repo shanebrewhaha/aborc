@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpqyefncmboqy"]
+
+[ext_resource type="Script" path="res://right_path_death.gd" id="1_fh85x"]
+[ext_resource type="FontFile" uid="uid://cwbi8x2m2jlnn" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_wcah8"]
+[ext_resource type="Texture2D" uid="uid://b7w88lias8fox" path="res://assets/Gemini_Generated_Image_jxvh71jxvh71jxvh.jpg" id="3_0757w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o6i5j"]
+font = ExtResource("1_wcah8")
+font_size = 18
+
+[node name="RightPathDeath" type="Node2D"]
+script = ExtResource("1_fh85x")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 472.0
+offset_right = 922.0
+offset_bottom = 643.0
+text = "You walk down the right path AGIAN, but you notice
+its getting much darker. Each step you take the 
+darker it gets. Eventually you smell fresh air,
+excitment rushes into your heart! You begin running.
+Light shoots into the path, you're eyes begin to
+adjust, but its too late! The floor under you is 
+suddenly gone and you fall to your death..."
+label_settings = SubResource("LabelSettings_o6i5j")
+
+[node name="Button_restart" type="Button" parent="."]
+offset_left = 949.0
+offset_top = 490.0
+offset_right = 1132.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("1_wcah8")
+text = "Restart"
+
+[node name="Button_last_room" type="Button" parent="."]
+offset_left = 948.0
+offset_top = 553.0
+offset_right = 1131.0
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("1_wcah8")
+text = "Last Room"
+
+[node name="GeminiGeneratedImageJxvh71Jxvh71Jxvh" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 308)
+scale = Vector2(0.833333, 0.458984)
+texture = ExtResource("3_0757w")
+
+[connection signal="button_down" from="Button_restart" to="." method="_on_button_restart_button_down"]
+[connection signal="button_down" from="Button_last_room" to="." method="_on_button_last_room_button_down"]
